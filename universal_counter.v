@@ -1,4 +1,5 @@
 // a simple counter that can count both up and down
+// Behaves synchronously
 module counter (
     input clk, // clock signal
     input rst, // reset output signal

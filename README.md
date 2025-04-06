@@ -1,4 +1,4 @@
-# Learning-Verilog
+# Digital Hardware Blocks
 
 A special collection of practical digital hardware elements in Verilog.
 
@@ -14,8 +14,11 @@ Testbenched using Verilator in C++.
 - An edge detector in `edge_detector.v`
 - An asynchronous reset circuit in `async_reset.v`
 - A comparator circuit in `comparator.v`
+- An 8 to 3 bit priority encoder in `priority_encoder.v`
+- A synchronous universal up/down counter in `universal_counter.v`
+- A tri-state buffer in `tri_state_buffer.v`
 
-### How to run
+### How Do I Run C++ Verilator Testbench?
 
 Lets say we have a Verilog `module.v` and a C++ `tb_module.cpp`
 

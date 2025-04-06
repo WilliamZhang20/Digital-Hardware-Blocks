@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module dff (
     input wire d,
     input wire clk,

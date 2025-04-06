@@ -8,8 +8,10 @@ module edge_detector(
 
   reg data_prev;
 
+  // Sensitivity to rising edge of clock or reset
   always @(posedge clk or posedge reset) begin
     if (reset) begin
+      // all signals set to 0
       data_prev <= 1'b0;
       rising_edge <= 1'b0;
       falling_edge <= 1'b0;

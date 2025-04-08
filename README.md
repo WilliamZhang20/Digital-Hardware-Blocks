@@ -18,6 +18,7 @@ Testbenched using Verilator in C++.
 - A synchronous universal up/down counter in `universal_counter.v`
 - A tri-state buffer in `tri_state_buffer.v`
 - A 4-bit Fibonacci sequence generator in `fibonacci.v`
+- A simple Mealy Machine-based parity checker in `mealy_machine.v`
 
 ### How Do I Run C++ Verilator Testbench?
 

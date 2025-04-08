@@ -14,6 +14,7 @@ module mealy_machine (
 
     state_t state, next_state;
 
+    // toggling state reigster
     always_ff @(posedge clk or posedge rst) begin
         if(rst)
             state <= S1; // start with even (zero 1's is even)
@@ -22,7 +23,8 @@ module mealy_machine (
     end
 
     // forcing always combinational logic (gates or muxes only)
-    // avoids latch inference
+    // avoids latch 
+    // overall, the below decodes the logic for the next state AND the machine's output
     always_comb begin
         next_state = state;
         dout = 0;
@@ -32,6 +34,7 @@ module mealy_machine (
                 // case on inputs
                 if (din) begin
                     next_state = S2;
+                    dout = 0;
                 end 
                 else begin
                     next_state = S1;

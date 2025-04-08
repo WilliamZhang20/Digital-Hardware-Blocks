@@ -17,6 +17,7 @@ Testbenched using Verilator in C++.
 - An 8 to 3 bit priority encoder in `priority_encoder.v`
 - A synchronous universal up/down counter in `universal_counter.v`
 - A tri-state buffer in `tri_state_buffer.v`
+- A 4-bit Fibonacci sequence generator in `fibonacci.v`
 
 ### How Do I Run C++ Verilator Testbench?
 
@@ -29,3 +30,11 @@ verilator -cc module.v --exe tb_module.cpp # to generate a makefile
 make -C obj_dir -f Vmodule.mk Vmodule # to build the executable
 ./obj_dir/Vmodule 
 ```
+
+### How Might I Visualize the Circuit?
+
+Using waveforms, specifically, the GTKWave tool!
+
+Example of a waveform on Fibonacci:
+
+![Screenshot 2025-04-07 205205](https://github.com/user-attachments/assets/316dbfe5-8f06-4236-b371-3cc7907a9e0a)

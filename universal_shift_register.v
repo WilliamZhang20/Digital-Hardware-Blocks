@@ -44,7 +44,6 @@ module universal_shift_register #(
             end
             // If both left_en and right_en are high, or both are low,
             // the register will hold its value due to the default assignment.
-            // You might want to define specific behavior for these cases if needed.
         end
     end
 

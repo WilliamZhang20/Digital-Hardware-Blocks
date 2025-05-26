@@ -21,6 +21,9 @@ module dual_port_ram
     always_ff @(posedge clk) begin
         if (we0 && !(we1 && addr0 == addr1))
             ram[addr0] <= w0_data;
+
+        // Due to the nonblocking assignment, the r0_data will see the OLD value of ram[addr0]
+        // Synchronous RAM typically outputs the stored data before the new data is written on the clock edge.
         r0_data <= ram[addr0];
     end
 

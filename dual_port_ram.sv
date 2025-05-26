@@ -6,7 +6,7 @@ module dual_port_ram
 (
     input logic clk,
     input logic we0, we1,
-    input logic [$clog2(SIZE)-1:0] addr0, addr1,
+    input logic [$clog2(SIZE)-1:0] addr0, addr1, // Call ceiling log2
     input logic [DATA_N-1:0] w0_data, w1_data,
     output logic [DATA_N-1:0] r0_data, r1_data
 );
@@ -19,7 +19,7 @@ module dual_port_ram
     end
 
     always_ff @(posedge clk) begin
-        if (we0)
+        if (we0 && !(we1 && addr0 == addr1))
             ram[addr0] <= w0_data;
         r0_data <= ram[addr0];
     end
